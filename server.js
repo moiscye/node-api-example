@@ -16,7 +16,11 @@ app.use(bodyParser.json());
 
 const port = process.env.PORT || 8080; // set our port
 
-// connect to our database
+
+//the following line is in case we want to work with localhost
+//mongoose.connect(localhost:27017/userDB, {useNewUrlParser: true});
+
+// connect to our database to MongoAtlas
 mongoose.connect(process.env.MONGOLAB_URI, { useNewUrlParser: true});
 
 
